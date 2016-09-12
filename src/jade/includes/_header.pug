@@ -1,0 +1,15 @@
+//begin header
+header.header(role='header')
+	.container
+		//begin logo
+		a.header__logo.logo(href='index.html')
+			+i('logo')
+		//end logo
+		.header__controls
+			form.header__form(action='#')
+				input.header__form-input.js-search-input(type='text' placeholder='search...')
+				button.header__search.js-search-btn(type='button')
+					+i('search')
+			button.header__nav-btn(type='button')
+				+i('nav')
+//end header

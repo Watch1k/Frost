@@ -1,0 +1,227 @@
+extend includes/_layout
+block title
+	title Index
+block content
+	//begin screen
+	section.screen
+		.screen__inner
+			a.screen__btn.btn.btn_red(href='javascript:void(0)') inside our studio
+			h1.screen__title Frostbite
+		button.screen__next.js-next-btn(type='button')
+			+i('arrow-bottom')
+	//end screen
+
+	//begin team
+	section.team
+		.container
+			.title-icon
+				+i('waves')
+			h2.team__title.title a team of creatives based out of california
+		.container.container_md
+			//begin list
+			ul.team__list.list
+				li.list__item
+					.list__content
+						h3.list__title who we are
+						p.list__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat. Maecenas placerat vestibulum neque et venenatis. Donec condimentum metus in tempor luctus.
+					.list__image
+						img.list__img(src='img/content/team-1.jpg' alt='image')
+					li.list__item
+						.list__image
+							img.list__img(src='img/content/team-1.jpg' alt='image')
+						.list__content
+							h3.list__title who we are
+							p.list__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat. Maecenas placerat vestibulum neque et venenatis. Donec condimentum metus in tempor luctus.
+			//end list
+			.team__desc
+				.team__desc-row
+					.team__desc-col
+						p.team__desc-text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget commodo risus. Nulla placerat nunc nulla, id porta sapien varius sed. In vel est a dui sodales varius. In facilisis, risus non maximus scelerisque, mauris massa vehicula tortor, nec vestibulum ipsum sem et magna. Maecenas in purus ut arcu pellentesque tempus. Curabitur viverra quis ipsum vitae hendrerit. Aenean nec consequat neque, non euismod sapien. Nullam fringilla justo sed consequat pellentesque. Praesent egestas porta vestibulum.
+					.team__desc-col
+						p.team__desc-text Nullam gravida odio quis ligula hendrerit, a consectetur nulla tincidunt. Ut finibus, quam id sodales tempus, neque diam fringilla lectus, vel ultricies est neque eget metus. Duis id efficitur libero. Etiam facilisis, ipsum volutpat ultrices finibus, orci sem consectetur leo, in blandit ipsum ex vitae lorem. Praesent placerat odio in lectus maximus, vel vehicula nulla scelerisque. Nullam et feugiat nibh. Nullam ultrices libero nec eros commodo, a tempus metus condimentum.
+			//begin controls
+			.team__controls.controls
+				button.controls__btn.btn.btn_red.btn_md(type='button') journal
+				button.controls__btn.btn.btn_grey.btn_md(type='button') our story
+			//end controls
+	//end team
+
+	//begin projects
+	section.projects
+		.container.container_md
+			h2.title.title_white latest projects
+			p.projects__subtitle Aliquam sed posuere urna, et gravida nisl. Praesent interdum nisl libero, pretium egestas purus eleifend vitae. Mauris suscipit vel lectus at luctus.
+			//begin controls
+			.projects__controls.controls
+				button.controls__btn.btn.btn_red.btn_md(type='button') journal
+				button.controls__btn.btn.btn_white.btn_md(type='button') our story
+			//end controls
+	//end projects
+
+	//begin slider
+	section.slider
+		.slider__container.container.container_md
+			.slider__main
+				.slider__for.js-slider-for
+					.slider__item.is-active
+						.slider__item-in
+							img.slider__img(src='img/content/slider-1.jpg' alt='image')
+					.slider__item
+						.slider__item-in
+							img.slider__img(src='img/content/slider-2.jpg' alt='image')
+					.slider__item
+						.slider__item-in
+							img.slider__img(src='img/content/slider-1.jpg' alt='image')
+				.slider__controls.js-slider-controls
+					button.slider__prev(type='button')
+						+i('arrow-left')
+					button.slider__next(type='button')
+						+i('arrow-right')
+			.slider__row
+				.slider__col.js-slider-text
+					.slider__desc.is-active
+						h3.slider__title.subtitle case studies
+						p.slider__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac odio quis augue iaculis aliquam tristique id sapien. Proin ultricies tortor porta, volutpat sapien nec, hendrerit ligula. Ut id ipsum eu leo maximus rutrum.
+						.slider__info
+							+i('clock')
+							span.slider__info-text 4 hours ago - by Andrew B.
+					.slider__desc
+						h3.slider__title.subtitle case studies 2
+						p.slider__text Lorem
+						.slider__info
+							+i('clock')
+							span.slider__info-text 24 hours ago - by Andrew B.
+					.slider__desc
+						h3.slider__title.subtitle case studies 3
+						p.slider__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac odio quis augue iaculis aliquam tristique id sapien.
+						.slider__info
+							+i('clock')
+							span.slider__info-text 34 hours ago - by Andrew B.
+				.slider__col
+					.slider__col-in
+						ul.slider__nav.js-slider-nav
+							li.slider__nav-btn.is-active 01
+							li.slider__nav-btn 02
+							li.slider__nav-btn 03
+	//end slider
+
+	//begin journal
+	section.journal
+		.journal__container.container.container_md
+			.journal__col
+				.journal__inner
+					.journal__title-icon.title-icon
+						+i('waves')
+					h3.journal__title.subtitle our journal
+					p.journal__text Aliquam sed posuere urna, et gravida nisl. Praesent interdum nisl libero, pretium egestas purus eleifend vitae. Mauris suscipit vel lectus at luctus.
+					a.journal__btn.btn.btn_red.btn_md(href='#') read more
+			.journal__col
+				img.journal__image(src='img/content/journal-1.jpg' alt='image')
+				img.journal__img(src='img/content/journal-2.jpg' alt='image')
+	//end journal
+
+	//begin suicide squad
+	.squad.container.container_md
+		.squad__title-icon.title-icon
+			+i('waves')
+		h2.squad__title.title our team
+		//begin gallery
+		.gallery
+			.gallery__item
+				.gallery__image
+					img.gallery__img(src='img/content/gal-1.jpg' alt='image')
+				.gallery__caption
+					span.gallery__title Adam Smith
+					span.gallery__subtitle CEO, Brand director
+					p.gallery__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat.
+					//begin socials
+					ul.galley__socials.socials
+						li.socials__item
+							a.socials__link(href='#')
+								+i('tw')
+						li.socials__item
+							a.socials__link(href='#')
+								+i('fb')
+					//end socials
+			.gallery__item
+				.gallery__image
+					img.gallery__img(src='img/content/gal-2.jpg' alt='image')
+				.gallery__caption
+					span.gallery__title Eric Johnson
+					span.gallery__subtitle CEO, Operations director
+					p.gallery__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat.
+					//begin socials
+					ul.galley__socials.socials
+						li.socials__item
+							a.socials__link(href='#')
+								+i('tw')
+						li.socials__item
+							a.socials__link(href='#')
+								+i('fb')
+					//end socials
+			.gallery__item
+				.gallery__image
+					img.gallery__img(src='img/content/gal-3.jpg' alt='image')
+				.gallery__caption
+					span.gallery__title Cecelia Hines
+					span.gallery__subtitle photographer
+					p.gallery__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat.
+					//begin socials
+					ul.galley__socials.socials
+						li.socials__item
+							a.socials__link(href='#')
+								+i('tw')
+						li.socials__item
+							a.socials__link(href='#')
+								+i('fb')
+					//end socials
+			.gallery__item
+				.gallery__image
+					img.gallery__img(src='img/content/gal-4.jpg' alt='image')
+				.gallery__caption
+					span.gallery__title Ben Ferguson
+					span.gallery__subtitle brand, UI designer
+					p.gallery__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat.
+					//begin socials
+					ul.galley__socials.socials
+						li.socials__item
+							a.socials__link(href='#')
+								+i('tw')
+						li.socials__item
+							a.socials__link(href='#')
+								+i('fb')
+					//end socials
+			.gallery__item
+				.gallery__image
+					img.gallery__img(src='img/content/gal-5.jpg' alt='image')
+				.gallery__caption
+					span.gallery__title Judy Davis
+					span.gallery__subtitle ux / ui designer
+					p.gallery__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat.
+					//begin socials
+					ul.galley__socials.socials
+						li.socials__item
+							a.socials__link(href='#')
+								+i('tw')
+						li.socials__item
+							a.socials__link(href='#')
+								+i('fb')
+					//end socials
+			.gallery__item
+				.gallery__image
+					img.gallery__img(src='img/content/gal-6.jpg' alt='image')
+				.gallery__caption
+					span.gallery__title Thomas Peterson
+					span.gallery__subtitle project manager
+					p.gallery__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat.
+					//begin socials
+					ul.galley__socials.socials
+						li.socials__item
+							a.socials__link(href='#')
+								+i('tw')
+						li.socials__item
+							a.socials__link(href='#')
+								+i('fb')
+					//end socials
+		//end gallery
+	//end suicide squad
