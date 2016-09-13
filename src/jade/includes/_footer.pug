@@ -1,16 +1,42 @@
 //block footToggle
 //  -var footToggle = ''
 //-var footMenu = ['Menu 1', 'Menu 2', 'Menu 3', 'Menu 4']
-//footer.footer
-//  .wrap
-//    span.copyright &copy; Template
-//    nav
-//      .foot-nav
-//        ul
-//          each value in footMenu
-//            if footToggle === value
-//              li.is-active
-//                a(href='#')= value
-//            else
-//              li
-//                a(href='#')= value
+footer.footer(role='footer')
+	.container.container_md
+		.footer__row
+			.footer__col
+				a.footer__logo.logo(href='javascript: void(0)')
+					+i('logo')
+			.footer__col
+				nav.footer__nav.nav
+					a.nav__link(href='javascript: void(0)') Our Team
+					a.nav__link(href='javascript: void(0)') Exclusive Offers
+					a.nav__link(href='javascript: void(0)') Contact Us
+					a.nav__link(href='javascript: void(0)') Licencing
+					a.nav__link(href='javascript: void(0)') Support
+					a.nav__link(href='javascript: void(0)') Privacy Policy
+					a.nav__link(href='javascript: void(0)') Blog
+					a.nav__link(href='javascript: void(0)') Refund Policy
+			.footer__col
+				//begin socials
+				ul.footer__socials.socials.socials_reverse
+					li.socials__item
+						a.socials__link(href='#')
+							+i('tw')
+					li.socials__item
+						a.socials__link(href='#')
+							+i('fb')
+				//end socials
+			.footer__col
+				//begin contact
+				.footer__contact.contact
+					h4.contact__title Join Our newsletter
+					p.contact__subtitle Join up and get notified about new products, updates and special offers.
+					form.footer__form.form(action='#')
+						.form__field
+							input.form__input(type='text' placeholder='Enter your email' data-validation="email")
+							button.form__submit(type='submit')
+								+i('arrow-right')
+				//end contact
+
+

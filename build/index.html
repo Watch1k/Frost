@@ -127,13 +127,22 @@
           <div class="slider__main">
             <div class="slider__for js-slider-for">
               <div class="slider__item is-active">
-                <div class="slider__item-in"><img class="slider__img" src="img/content/slider-1.jpg" alt="image"></div>
+                <div class="slider__item-in">
+                  <button class="slider__play js-play" type="button">
+                      <svg class="icon icon-play">
+                        <use xlink:href="img/sprite.svg#icon-play"></use>
+                      </svg>
+                    </button>
+                  <video class="slider__video js-video" height="450" poster="video/poster.jpg">
+                      <source src="video/video.mp4" type="video/mp4">
+                    </video>
+                </div>
               </div>
               <div class="slider__item">
-                <div class="slider__item-in"><img class="slider__img" src="img/content/slider-2.jpg" alt="image"></div>
+                <div class="slider__item-in"><img class="slider__el" src="img/content/slider-2.jpg" alt="image"></div>
               </div>
               <div class="slider__item">
-                <div class="slider__item-in"><img class="slider__img" src="img/content/slider-1.jpg" alt="image"></div>
+                <div class="slider__item-in"><img class="slider__el" src="img/content/slider-1.jpg" alt="image"></div>
               </div>
             </div>
             <div class="slider__controls js-slider-controls">
@@ -225,7 +234,7 @@
             <div class="gallery__caption"><span class="gallery__title">Adam Smith</span><span class="gallery__subtitle">CEO, Brand director</span>
               <p class="gallery__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat.</p>
               <!--begin socials-->
-              <ul class="galley__socials socials">
+              <ul class="gallery__socials socials">
                 <li class="socials__item">
                   <a class="socials__link" href="#">
                     <svg class="icon icon-tw">
@@ -247,7 +256,7 @@
             <div class="gallery__caption"><span class="gallery__title">Eric Johnson</span><span class="gallery__subtitle">CEO, Operations director</span>
               <p class="gallery__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat.</p>
               <!--begin socials-->
-              <ul class="galley__socials socials">
+              <ul class="gallery__socials socials">
                 <li class="socials__item">
                   <a class="socials__link" href="#">
                     <svg class="icon icon-tw">
@@ -269,7 +278,7 @@
             <div class="gallery__caption"><span class="gallery__title">Cecelia Hines</span><span class="gallery__subtitle">photographer</span>
               <p class="gallery__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat.</p>
               <!--begin socials-->
-              <ul class="galley__socials socials">
+              <ul class="gallery__socials socials">
                 <li class="socials__item">
                   <a class="socials__link" href="#">
                     <svg class="icon icon-tw">
@@ -291,7 +300,7 @@
             <div class="gallery__caption"><span class="gallery__title">Ben Ferguson</span><span class="gallery__subtitle">brand, UI designer</span>
               <p class="gallery__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat.</p>
               <!--begin socials-->
-              <ul class="galley__socials socials">
+              <ul class="gallery__socials socials">
                 <li class="socials__item">
                   <a class="socials__link" href="#">
                     <svg class="icon icon-tw">
@@ -313,7 +322,7 @@
             <div class="gallery__caption"><span class="gallery__title">Judy Davis</span><span class="gallery__subtitle">ux / ui designer</span>
               <p class="gallery__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat.</p>
               <!--begin socials-->
-              <ul class="galley__socials socials">
+              <ul class="gallery__socials socials">
                 <li class="socials__item">
                   <a class="socials__link" href="#">
                     <svg class="icon icon-tw">
@@ -335,7 +344,7 @@
             <div class="gallery__caption"><span class="gallery__title">Thomas Peterson</span><span class="gallery__subtitle">project manager</span>
               <p class="gallery__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat.</p>
               <!--begin socials-->
-              <ul class="galley__socials socials">
+              <ul class="gallery__socials socials">
                 <li class="socials__item">
                   <a class="socials__link" href="#">
                     <svg class="icon icon-tw">
@@ -360,19 +369,59 @@
   </div>
   <!--block footToggle-->
   <!--  -var footToggle = ''-->
-  <!--footer.footer-->
-  <!--  .wrap-->
-  <!--    span.copyright &copy; Template-->
-  <!--    nav-->
-  <!--      .foot-nav-->
-  <!--        ul-->
-  <!--          each value in footMenu-->
-  <!--            if footToggle === value-->
-  <!--              li.is-active-->
-  <!--                a(href='#')= value-->
-  <!--            else-->
-  <!--              li-->
-  <!--                a(href='#')= value-->
+  <footer class="footer" role="footer">
+    <div class="container container_md">
+      <div class="footer__row">
+        <div class="footer__col">
+          <a class="footer__logo logo" href="javascript: void(0)">
+            <svg class="icon icon-logo">
+                <use xlink:href="img/sprite.svg#icon-logo"></use>
+              </svg></a>
+        </div>
+        <div class="footer__col">
+          <nav class="footer__nav nav"><a class="nav__link" href="javascript: void(0)">Our Team</a><a class="nav__link" href="javascript: void(0)">Exclusive Offers</a><a class="nav__link" href="javascript: void(0)">Contact Us</a><a class="nav__link" href="javascript: void(0)">Licencing</a>
+            <a
+              class="nav__link" href="javascript: void(0)">Support</a><a class="nav__link" href="javascript: void(0)">Privacy Policy</a><a class="nav__link" href="javascript: void(0)">Blog</a><a class="nav__link" href="javascript: void(0)">Refund Policy</a></nav>
+        </div>
+        <div class="footer__col">
+          <!--begin socials-->
+          <ul class="footer__socials socials socials_reverse">
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+                <svg class="icon icon-tw">
+                    <use xlink:href="img/sprite.svg#icon-tw"></use>
+                  </svg></a>
+            </li>
+            <li class="socials__item">
+              <a class="socials__link" href="#">
+                <svg class="icon icon-fb">
+                    <use xlink:href="img/sprite.svg#icon-fb"></use>
+                  </svg></a>
+            </li>
+          </ul>
+          <!--end socials-->
+        </div>
+        <div class="footer__col">
+          <!--begin contact-->
+          <div class="footer__contact contact">
+            <h4 class="contact__title">Join Our newsletter</h4>
+            <p class="contact__subtitle">Join up and get notified about new products, updates and special offers.</p>
+            <form class="footer__form form" action="#">
+              <div class="form__field">
+                <input class="form__input" type="text" placeholder="Enter your email" data-validation="email">
+                <button class="form__submit" type="submit">
+                    <svg class="icon icon-arrow-right">
+                      <use xlink:href="img/sprite.svg#icon-arrow-right"></use>
+                    </svg>
+                  </button>
+              </div>
+            </form>
+          </div>
+          <!--end contact-->
+        </div>
+      </div>
+    </div>
+  </footer>
   <script src="js/app.js"></script>
 </body>
 

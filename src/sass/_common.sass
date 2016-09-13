@@ -28,6 +28,14 @@ $light: #191919
 	font-weight: 700
 	line-height: 33px
 	text-transform: uppercase
+	+r(1024)
+		font-size: 26px
+		line-height: 1.46
+	+r(767)
+		font-size: 40px
+		line-height: 50px
+		padding-left: 10%
+		padding-right: 10%
 	
 =subtitle
 	+raleway
@@ -36,6 +44,12 @@ $light: #191919
 	font-weight: 700
 	line-height: 43px
 	text-transform: uppercase
+	+r(1024)
+		font-size: 24px
+		line-height: 1.79
+	+r(767)
+		font-size: 40px
+		line-height: 50px
 
 
 /* ===================================
@@ -114,6 +128,14 @@ img
 	text-transform: uppercase
 	background-color: transparent
 	border: 2px solid transparent
+	+r(1024)
+		font-size: 16px
+	+r(767)
+		font-size: 24px
+		line-height: 78px
+	+r(639)
+		font-size: 12px
+		line-height: 48px
 	&_md
 		width: 130px
 	&_red
@@ -221,8 +243,123 @@ img
 	 Footer
 	 =================================== */
 .footer
-	//margin-top: -40px
-	//height: 40px
+	position: relative
+	padding-top: 80px
+	padding-bottom: 80px
+	background-color: $dark
+	+r(1024)
+		padding-left: 100px
+		padding-right: 100px
+	+r(1023)
+		padding-bottom: 160px
+	+r(767)
+		padding-left: 40px
+		padding-right: 40px
+	&__col
+		&:nth-child(1)
+			+span(1.75 no-gutters)
+			+r(1023)
+				+span(2 no-gutters)
+			+r(767)
+				+span(3 no-gutters)
+			+r(479)
+				+span(full no-gutters)
+				margin-bottom: 60px
+		&:nth-child(2)
+			+span(3.75 no-gutters)
+			+r(1023)
+				+span(5 no-gutters)
+			+r(767)
+				+span(9 no-gutters)
+			+r(479)
+				+span(full no-gutters)
+		&:nth-child(3)
+			+span(2.25 no-gutters)
+			+r(1023)
+				position: absolute
+				bottom: 80px
+				left: 60px
+				right: 0
+				width: 50%
+				float: none
+			+r(767)
+				left: 0
+		&:nth-child(4)
+			+span(4.25 no-gutters)
+			+r(1023)
+				+span(5 no-gutters)
+				padding-left: 20px
+			+r(767)
+				margin-top: 60px
+				padding-left: 0
+				width: 100%
+	&__logo
+		color: $white
+	&__socials
+		display: inline-block
+		+pre(2*gutter())
+		color: $white
+		text-align: center
+	&__contact
+		color: $white
+		
+.nav
+	font-size: 13px
+	color: $white
+	+pie-clearfix
+	&__link
+		+span(6 no-gutters)
+	&__link:nth-child(2) ~ &__link
+		margin-top: 15px
+	
+.contact
+	&__title
+		font-size: 14px
+		text-transform: uppercase
+	&__subtitle
+		margin-top: 2px
+		margin-bottom: 20px
+		font-size: 12px
+		
+.form
+	&__field
+		position: relative
+		+pie-clearfix
+	&__input
+		float: left
+		margin-right: -30px
+		padding: 0 40px 0 20px
+		height: 40px
+		width: 80%
+		font-size: 12px
+		color: $white
+		line-height: 36px
+		border: 2px solid $white
+		background-color: transparent
+		opacity: 0.2
+		transition: all 0.2s
+		+r(1024)
+			width: 100%
+		+r(767)
+			width: 260px
+		&:focus
+			opacity: 1
+	&__submit
+		float: left
+		line-height: 38px
+		color: $white
+		opacity: 0.2
+		transition: all 0.2s
+	&__input:focus + &__submit
+		opacity: 1
+	&-error
+		margin-top: 10px
+		width: 100%
+		float: left
+		opacity: 0.75
+		font-size: 12px
+		display: block
+		
 
 
 /* ===================================
@@ -242,12 +379,23 @@ img
 	background: url(../img/content/screen.jpg) center center no-repeat
 	background-size: cover
 	+vertical
+	+r(767)
+		height: 480px
 	&__inner
 		display: inline-block
 		vertical-align: middle
 	&__btn
 		margin-bottom: 20px
 		line-height: 31px
+		+r(1024)
+			padding: 0 20px
+			font-size: 24px
+			line-height: 49px
+		+r(767)
+			font-size: 30px
+			line-height: 56px
+		+r(367)
+			font-size: 24px
 	&__title
 		margin-left: 70px
 		text-shadow: 0 2px 2px rgba(0, 0, 0, 0.05)
@@ -258,6 +406,8 @@ img
 		line-height: 1.43
 		text-transform: uppercase
 		letter-spacing: 75px
+		+r(1024)
+			display: none
 	&__next
 		position: absolute
 		width: 40px
@@ -267,6 +417,8 @@ img
 		margin-left: -20px
 		color: $white
 		+vertical
+		+r(767)
+			display: none
 		.icon
 			font-size: 9px
 			animation: anim-next 1s alternate infinite ease-in-out
@@ -285,15 +437,30 @@ img
 .team
 	padding-top: 140px
 	padding-bottom: 170px
+	+r(1024)
+		padding-top: 80px
 	&__title
 		max-width: 320px
 		margin-left: auto
 		margin-right: auto
+		+r(1024)
+			max-width: 350px
+		+r(767)
+			max-width: 620px
+			padding-left: 40px
+			padding-right: 40px
+		+r(479)
+			font-size: 30px
+			padding-left: 10px
+			padding-right: 10px
+			line-height: 40px
 	&__list
 		margin-top: 115px
 	&__desc
 		position: relative
 		margin-top: 160px
+		+r(1024)
+			margin-top: 110px
 		&:before
 			content: ''
 			position: absolute
@@ -304,22 +471,51 @@ img
 			height: 30px
 			background-color: $light
 			opacity: 0.2
+			+r(1024)
+				width: 100px
+				left: -50px
+			+r(1023)
+				left: -75px
+			+r(767)
+				display: none
 		&-row
 			+pie-clearfix
+			+r(767)
+				padding-top: 110px
+				border-top: 1px solid rgba(0, 0, 0, .1)
 		&-col
 			+span(6 no-gutters)
 			&:nth-child(odd)
 				+pad(3*gutter(), gutter())
+				+r(1023)
+					padding-left: 5%
+					padding-right: (2*gutter()/3)
+				+r(767)
+					padding: 0 10%
+					width: 100%
 			&:nth-child(even)
 				+pad(gutter(), 3*gutter())
+				+r(1023)
+					padding-left: (2*gutter()/3)
+					padding-right: 5%
+				+r(767)
+					margin-top: 110px
+					width: 100%
+					padding: 0 10%
 	&__controls
 		margin-top: 50px
 		
 .controls
 	font-size: 0
 	text-align: center
+	+r(767)
+		padding-left: 10%
+		padding-right: 10%
 	&__btn
 		margin: 0 10px
+		+r(767)
+			margin: 0 5%
+			width: 40%
 		
 .list
 	&__item
@@ -328,6 +524,8 @@ img
 		table-layout: fixed
 		& + &
 			margin-top: 50px
+			+r(767)
+				margin-top: 110px
 	&__content
 		display: table-cell
 		padding-left: 70px
@@ -335,11 +533,28 @@ img
 		width: 50%
 		height: 100%
 		vertical-align: middle
+		+r(1024)
+			padding-right: 5%
+		+r(767)
+			display: block
+			width: 100%
+			padding: 0 10%
+			text-align: center
 	&__image
 		display: table-cell
 		width: 50%
 		height: 100%
 		vertical-align: middle
+		+r(767)
+			width: 100%
+			display: table-header-group
+			padding: 0
+			max-width: 100%
+	&__img
+		+r(767)
+			margin-bottom: 110px
+			width: 100%
+			max-width: none
 	&__title
 		margin-bottom: 10px
 		+subtitle
@@ -353,6 +568,8 @@ img
 	padding-top: 120px
 	padding-bottom: 315px
 	background-color: $dark
+	+r(719)
+		padding-bottom: 120px
 	&:before
 		content: ''
 		position: absolute
@@ -371,6 +588,9 @@ img
 		margin-left: auto
 		margin-right: auto
 		text-align: center
+		+r(767)
+			padding-left: 10%
+			padding-right: 10%
 	&__controls
 		margin-top: 25px
 		
@@ -383,8 +603,12 @@ img
 	z-index: 1
 	margin-top: -220px
 	padding-bottom: 220px
+	+r(719)
+		margin-top: -60px
 	&__container
 		padding: 0 25px
+		+r(1024)
+			padding: 0
 	&__main
 		position: relative
 	&__for
@@ -394,6 +618,15 @@ img
 		white-space: nowrap
 		font-size: 0
 		+pie-clearfix
+		+r(1024)
+			overflow: auto
+			margin-left: calc((100% - 600px)/2)
+		+r(719)
+			overflow: hidden
+			margin-left: 40px
+			margin-right: 40px
+			padding-top: 0
+			padding-bottom: 0
 	&__item
 		display: inline-block
 		width: 640px
@@ -402,10 +635,40 @@ img
 		transform-style: preserve-3d
 		transform-origin: left center
 		transition: transform 1s
+		+r(719)
+			width: 100%
+			vertical-align: middle
 		&-in
+			overflow: hidden
 			width: 450px
+			+r(719)
+				width: 100%
 		&.is-active
 			transform: scale(1.333333, 1.333333) translateZ(0)
+			+r(719)
+				transform: none
+	&__video
+		position: relative
+		+r(719)
+			width: 100%
+			height: auto !important
+	&__play
+		width: 45px
+		height: 45px
+		color: $white
+		border: 2px solid $white
+		+vcenter
+		left: 230px
+		z-index: 100
+		+vertical
+		+r(719)
+			left: 50%
+		.icon
+			position: relative
+			left: 2px
+	&__el
+		+r(719)
+			width: 100%
 	&__controls
 		pointer-events: none
 		position: absolute
@@ -415,6 +678,22 @@ img
 		right: -125px
 		margin-top: -30px
 		+pie-clearfix
+		+r(1399)
+			left: -65px
+			right: -65px
+		+r(1239)
+			left: -40px
+			right: -40px
+		+r(1024)
+			top: 100%
+			margin-top: 15px
+			left: 40px
+			right: 40px
+		+r(719)
+			top: 50%
+			margin-top: -30px
+			left: -10px
+			right: -10px
 	&__prev,
 	&__next
 		pointer-events: auto
@@ -435,19 +714,44 @@ img
 		margin-top: 45px
 		width: 100%
 		table-layout: fixed
+		+r(1024)
+			display: block
+			margin-top: 80px
+			width: 600px
+			margin-left: auto
+			margin-right: auto
+			+pie-clearfix
+		+r(600)
+			width: 100%
 	&__col
 		display: table-cell
 		vertical-align: middle
 		height: 100%
 		&:nth-child(1)
 			+suffix(3*gutter())
+			+r(1024)
+				+span(9 no-gutters)
+				padding-left: 0
+				padding-right: 0
+				float: right
+			+r(719)
+				width: 100%
+				text-align: center
 		&:nth-child(2)
 			+prefix(gutter()/2)
 			text-align: right
+			+r(1024)
+				+span(3 no-gutters)
+				padding-left: 0
+				float: right
+			+r(719)
+				display: none
 		&-in
 			overflow: hidden
 	&__title
 		margin-bottom: 7px
+		+r(719)
+			margin-bottom: 25px
 	&__info
 		margin-top: 40px
 		color: $grey-light
@@ -466,6 +770,9 @@ img
 		display: inline-block
 		position: relative
 		font-size: 0
+		+r(1024)
+			display: block
+			text-align: left
 		&:before
 			content: ''
 			position: absolute
@@ -486,6 +793,9 @@ img
 			line-height: 2.69
 			opacity: 0.3
 			transition: all 0.2s
+			+r(1024)
+				margin-left: 0
+				margin-right: 20px
 			&.is-active
 				color: $dark
 				opacity: 0.7
@@ -496,6 +806,8 @@ img
 	 =================================== */
 .journal
 	background-color: rgba(148, 148, 148, .05)
+	+r(767)
+		padding-bottom: 120px
 	&__container
 		display: table
 		width: 100%
@@ -503,6 +815,8 @@ img
 		table-layout: fixed
 	&__title-icon
 		text-align: left
+		+r(767)
+			text-align: center
 	&__title
 		margin-bottom: 7px
 	&__btn
@@ -514,6 +828,15 @@ img
 		display: table-cell
 		vertical-align: middle
 		+suffix(gutter())
+		+r(1024)
+			+span(6 no-gutters)
+			float: none
+			display: table-cell
+			vertical-align: middle
+			padding-left: 100px
+		+r(767)
+			display: table-footer-group
+			width: 100%
 		&:nth-child(1)
 			+vertical
 			text-align: left
@@ -521,34 +844,73 @@ img
 			+span(8 no-gutters)
 			padding-left: 15px
 			+suffix(0)
+			+r(1024)
+				padding-left: 0
+				+span(6 no-gutters)
+			+r(767)
+				display: table-header-group
+				width: 100%
 	&__inner
 		display: inline-block
 		vertical-align: middle
 		font-size: 14px
+		+r(767)
+			margin-top: 120px
+			padding-left: 10%
+			padding-right: 10%
+			text-align: center
 	&__image
 		margin-top: -86px
 		+pre(100px)
 		max-width: none
+		+r(767)
+			margin-top: 0
+			+pre(0)
+			max-width: 100%
 	&__img
 		margin-top: -260px
+		margin-bottom: 40px
+		+r(1024)
+			margin-top: -160px
+		+r(767)
+			display: none
 		
 
 /* ===================================
 	 Suicide Squad
 	 =================================== */
 .squad
+	padding-top: 140px
+	padding-bottom: 140px
+	+r(1024)
+		padding-top: 80px
 	
 .gallery
+	margin-top: 45px
 	margin-left: -75px
 	font-size: 0
 	text-align: center
 	+pie-clearfix
+	+r(1024)
+		margin-left: 25px
+		margin-right: 100px
+	+r(719)
+		margin-left: 35px
+		margin-right: 35px
 	&__item
+		margin-top: 65px
 		display: inline-block
 		width: 330px
 		margin-left: 75px
 		font-size: 14px
 		text-align: left
+		+r(719)
+			margin-left: 0
+			width: 100%
+	&__img
+		+r(719)
+			width: 100%
+			max-width: none
 	&__title
 		display: block
 		margin-top: 45px
@@ -576,17 +938,27 @@ img
 			width: 30px
 			background-color: $light
 			opacity: 0.2
+	&__socials
+		margin-top: 25px
 		
 .socials
 	font-size: 0
 	&__item
+		display: inline-block
 		font-size: 14px
-		line-height: 16px
+		line-height: 20px
 		& + &
+			margin-left: 20px
 			font-size: 16px
 	&__link
 		display: block
-		
+	&_reverse
+		+pie-clearfix
+	&_reverse	&__item
+			float: right
+			margin-left: 20px
+	&_reverse	&__item:last-child
+		margin-left: 0
 		
 		
 

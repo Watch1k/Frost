@@ -4,6 +4,10 @@ $(document).ready(function(){
 	//for IE9
 	svg4everybody();
 
+	$.validate({
+		form: '.form'
+	});
+
 	// Clear placeholder
 	(function() {
 		var el = $('input, textarea');
@@ -15,6 +19,23 @@ $(document).ready(function(){
 			$(this).attr('placeholder',$(this).data('placeholder'));
 		});
 	}());
+
+	(function () {
+		var btn = $('.js-play'),
+			video = $('.js-video');
+
+		if (btn.length) {
+			btn.on('click', function () {
+				if (!$(this).hasClass('is-active')) {
+					$(this).addClass('is-active');
+					$(this).css('opacity', '0.2').siblings(video).get(0).play();
+				} else {
+					$(this).removeClass('is-active');
+					$(this).css('opacity', '1').siblings(video).get(0).pause();
+				}
+			});
+		}
+	})();
 
 	(function () {
 		var searchBtn = $('.js-search-btn'),
@@ -41,7 +62,12 @@ $(document).ready(function(){
 			sliderText = $('.js-slider-text'),
 			sliderTextHeight = 0,
 			currentHeight,
-			animationDuration = 1000;
+			animationDuration = 1000,
+			sliderWidth = $('.slider__item').outerWidth();
+
+		$(window).on('resize', function () {
+			sliderWidth = $('.slider__item').outerWidth();
+		});
 
 		if (sliderForItem.filter('.is-active').is(':first-child')) {
 			sliderPrev.addClass('is-disabled');
@@ -98,7 +124,7 @@ $(document).ready(function(){
 		}
 
 		function animatePrev() {
-			sliderForItem.filter('.is-active').removeClass('is-active').prev().addClass('is-active').animate({width: 640}, animationDuration, function () {
+			sliderForItem.filter('.is-active').removeClass('is-active').prev().addClass('is-active').animate({width: sliderWidth}, animationDuration, function () {
 				$(this).animate({opacity: 1});
 				if (sliderForItem.filter('.is-active').is(':first-child')) {
 					sliderPrev.addClass('is-disabled');

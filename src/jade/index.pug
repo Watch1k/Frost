@@ -65,13 +65,16 @@ block content
 				.slider__for.js-slider-for
 					.slider__item.is-active
 						.slider__item-in
-							img.slider__img(src='img/content/slider-1.jpg' alt='image')
+							button.slider__play.js-play(type='button')
+								+i('play')
+							video.slider__video.js-video(height='450' poster='video/poster.jpg')
+								source(src='video/video.mp4' type='video/mp4')
 					.slider__item
 						.slider__item-in
-							img.slider__img(src='img/content/slider-2.jpg' alt='image')
+							img.slider__el(src='img/content/slider-2.jpg' alt='image')
 					.slider__item
 						.slider__item-in
-							img.slider__img(src='img/content/slider-1.jpg' alt='image')
+							img.slider__el(src='img/content/slider-1.jpg' alt='image')
 				.slider__controls.js-slider-controls
 					button.slider__prev(type='button')
 						+i('arrow-left')
@@ -135,7 +138,7 @@ block content
 					span.gallery__subtitle CEO, Brand director
 					p.gallery__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat.
 					//begin socials
-					ul.galley__socials.socials
+					ul.gallery__socials.socials
 						li.socials__item
 							a.socials__link(href='#')
 								+i('tw')
@@ -151,7 +154,7 @@ block content
 					span.gallery__subtitle CEO, Operations director
 					p.gallery__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat.
 					//begin socials
-					ul.galley__socials.socials
+					ul.gallery__socials.socials
 						li.socials__item
 							a.socials__link(href='#')
 								+i('tw')
@@ -167,7 +170,7 @@ block content
 					span.gallery__subtitle photographer
 					p.gallery__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat.
 					//begin socials
-					ul.galley__socials.socials
+					ul.gallery__socials.socials
 						li.socials__item
 							a.socials__link(href='#')
 								+i('tw')
@@ -183,7 +186,7 @@ block content
 					span.gallery__subtitle brand, UI designer
 					p.gallery__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat.
 					//begin socials
-					ul.galley__socials.socials
+					ul.gallery__socials.socials
 						li.socials__item
 							a.socials__link(href='#')
 								+i('tw')
@@ -199,7 +202,7 @@ block content
 					span.gallery__subtitle ux / ui designer
 					p.gallery__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat.
 					//begin socials
-					ul.galley__socials.socials
+					ul.gallery__socials.socials
 						li.socials__item
 							a.socials__link(href='#')
 								+i('tw')
@@ -215,7 +218,7 @@ block content
 					span.gallery__subtitle project manager
 					p.gallery__text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim sollicitudin, suscipit enim nec, scelerisque erat.
 					//begin socials
-					ul.galley__socials.socials
+					ul.gallery__socials.socials
 						li.socials__item
 							a.socials__link(href='#')
 								+i('tw')
